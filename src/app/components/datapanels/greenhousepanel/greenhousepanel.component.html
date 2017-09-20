@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><div class="panel-title">{{greenhouse.name}}</div></div>
+  <div class="panel-body">
+    <div class="list-group">
+      <a href="#" class="list-group-item" (click)="stop()">
+        <dt class="list-group-item-heading">Description:</dt>
+        <dd class="list-group-item-text">{{greenhouse.description}}</dd>
+      </a>
+      <a href="#" class="list-group-item" (click)="stop()">
+        <dt class="list-group-item-heading">Location:</dt>
+        <dd class="list-group-item-text">{{greenhouse.location}}</dd>
+      </a>
+    </div>
+    <div class="panel-footer"><button (click)='clicked()' class="btn btn-success">Open</button></div>
+  </div>
+</div>
+

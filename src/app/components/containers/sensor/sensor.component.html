@@ -1,0 +1,49 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well well-sm">
+        <dt>Sensor Name:</dt><dd>{{sensor.name}}</dd>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well well-sm">
+        <dt>Description:</dt><dd>{{sensor.description}}</dd>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="well well-sm">
+        <dt>Manufacturer:</dt><dd>{{sensor.manufacturer}}</dd>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="well well-sm">
+        <dt>Model Number:</dt><dd>{{sensor.model}}</dd>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="well well-sm">
+        <dt>Serial Number:</dt><dd>{{sensor.serialNo}}</dd>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-md-push-8">
+      <!-- <input type="checkbox" [checked]="sensor.state" data-toggle="toggle" data-onstyle="info" data-offstyle="warning" data-height="40" data-width="60"> -->
+      <input type="checkbox" [checked]="sensor.isOn" (change)="toggleSensor()"/>{{state}}
+    </div>
+  </div>
+</div>
+<md-grid-list cols="3" rowHeight="300px">
+  <div [@staggerAnimation]="readings.length + 1">
+    <div class="col-md-4 col-sm-12" *ngFor='let reading of readings'>
+        <app-readingpanel [reading]="reading"></app-readingpanel>
+    </div>
+    <div class="col-md-4  col-sm-12">
+        <button class="btn btn-success" (click)='addReading()'><i class="material-icons md-100">add</i></button>
+    </div>
+  </div>
+</md-grid-list>
+
+

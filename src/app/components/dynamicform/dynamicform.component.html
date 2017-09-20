@@ -1,0 +1,9 @@
+
+<form class="form-horizontal" (ngSubmit)="onSubmit()" [formGroup] ="form">
+    <div *ngFor="let field of fields" class="form-group">
+      <app-dynamicformfield [field]="field" [form]="form"></app-dynamicformfield>
+    </div>
+    <div class="form-row">
+      <button md-button type="submit" [disabled]="!form.valid" color="accent">Add</button>
+    </div>
+</form>

@@ -1,0 +1,27 @@
+/* @import '~@angular/material/theming';
+
+@mixin extra-theme($theme){
+
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+   // $background: map-get($theme, background );
+    $foreground: map-get($theme, foreground);
+
+    $yellow: mat-palette($mat-yellow);
+
+     .content-color{
+        background-color: mat-color($primary);
+    }
+
+    .page-title{
+        color:mat-color($primary);
+        background-color: mat-color($yellow);
+    }
+    
+    .sm-border-color{
+        border-color: mat-color($primary);
+    }
+
+
+} */

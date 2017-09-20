@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><div class="panel-title">{{reading.name}}</div></div>
+  <div class="panel-body">
+    <div class="list-group">
+      <a href="#" class="list-group-item" (click)="stop()">
+        <dt class="list-group-item-heading">Description:</dt>
+        <dd class="list-group-item-text">{{reading.description}}</dd>
+      </a>
+      <a href="#" class="list-group-item" (click)="stop()">
+        {{reading.unit}}
+      </a>
+    </div>
+    <div class="row">
+      <ul class="pager col-md-4">
+        <li><a href="#" class="previous" (click)="decr()">&larr;</a></li>
+        <li><a href="#" class="next" (click)="incr()">&rarr;</a></li>
+      </ul>
+      <div class="col-md-4">
+        <input disabled [value]="reading.value"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-push-8">
+        <button (click)='clicked()' class="btn btn-success">Open</button>
+      </div>
+    </div>
+  </div>
+</div>  

@@ -1,0 +1,9 @@
+<div [formGroup] ='form'>
+  <div [ngSwitch] ="field.controlType">
+    <input *ngSwitchCase="'textbox'" [type]="text" [attr.placeholder]="field.label" [formControlName]="field.key" class="form-control">
+    <select *ngSwitchCase="'dropdown'" class="form-select" [formControlName]="field.key" class="form-control">
+      <option *ngFor="let opt of field.options" [value]="field.key">{{opt.value}}</option>
+    </select>
+  </div>
+</div>
+  

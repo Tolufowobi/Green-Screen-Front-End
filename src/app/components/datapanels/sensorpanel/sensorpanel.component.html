@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><div class="panel-title">{{sensor.name}}</div></div>
+  <div class="panel-body">
+    <div class="list-group">
+      <a href="#" class="list-group-item" (click)="stop()">
+        <dt class="list-group-item-heading">Description:</dt>
+        <dd class="list-group-item-text">{{sensor.description}}</dd>
+      </a>
+      <a href="#" class="list-group-item" (click)="stop()">
+        <dt class="list-group-item-heading">Manufacturer:</dt>
+        <dd class="list-group-item-text">{{sensor.manufacturer}}</dd>
+      </a>
+    <div class="panel-footer">
+      <div class="row">
+        <div class="col-md-6">
+          <button (click)='clicked()' class="btn btn-success">Open</button>
+        </div>
+        <div class="col-md-4 col-md-push-2">
+          <form>
+            <!-- <input type="checkbox" [(checked)]="sensor.isOn" (click)='toggleSensor()' data-toggle="toggle" data-style="ios" data-onstyle="info" data-offstyle="warning" data-height="30" data-width="50" name="sensor.name"> -->
+            <input type="checkbox" [checked]="sensor.isOn" (change)="toggleSensor()"/>{{state}}
+          </form>
+        </div>
+      </div>
+    </div>  
+  </div>
+</div> 
+ 

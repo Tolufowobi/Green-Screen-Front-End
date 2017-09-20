@@ -1,0 +1,13 @@
+
+
+<div class="well">
+  <div class="modal-header">
+    <h4 class="modal-title">Login.</h4>
+    <button type ="button" class="close" aria-label="Close"(click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-dynamicform [fields]="formFields" (formSubmitted)="login($event)"></app-dynamicform>
+  </div>
+</div> 

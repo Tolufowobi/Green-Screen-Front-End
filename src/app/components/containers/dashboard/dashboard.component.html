@@ -1,0 +1,41 @@
+<div class ="jumbotron">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="well well-sm well-info">
+        <dt>Name:</dt><dd>{{appuser.first_name}} {{appuser.last_name}}</dd>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class= "well well-sm">
+        <dt>Username:<dt><dd>{{appuser.username}}</dd>
+      </div>
+    </div>
+    <div *ngIf="appuser.address" class="col-md-4">
+      <div class= "well well-sm">
+        <dt>Address:<dt><dd>{{appuser.address}}</dd>
+      </div>
+    </div>
+    <div *ngIf="appuser.phone" class="col-md-4">
+      <div class= "well well-sm">
+        <dt>Phone:<dt><dd>{{appuser.phone}}</dd>
+      </div>
+    </div>
+  </div>
+</div>
+<md-grid-list cols="3" rowHeight="300px">
+  <div  [@staggerAnimation]="shelters.length + 1">
+    <div class="col-md-4 col-sm-12" *ngFor='let shelter of shelters'>
+      <app-greenhousepanel [greenhouse]="shelter"></app-greenhousepanel>
+    </div>
+    <div class="col-md-3 col-sm-12">
+      <button class="btn btn-success" (click)='addShelter()'><i class="material-icons md-100">add</i></button> 
+    </div>  
+  </div>
+</md-grid-list>
+  
+
+
+
+
+  
+
